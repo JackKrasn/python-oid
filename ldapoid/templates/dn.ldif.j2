@@ -1,0 +1,37 @@
+dn: {{ DN }}
+orclnetdescname: 000:cn=DESCRIPTION_0
+objectclass: top
+objectclass: orclNetService
+cn: {{ DBALIAS }}
+orclnetdescstring: (DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST={{ HOST }})(PORT={{ LISPORT }})))(CONNECT_DATA=(SERVICE_NAME={{ SERVICE_NAME }})))
+
+dn: cn=DESCRIPTION_0, {{ DN }}
+objectclass: top
+objectclass: orclNetDescription
+objectclass: orclNetDescriptionAux1
+cn: DESCRIPTION_0
+orclversion: v0.0
+orclnetaddrlist: 000:cn=ADDRESS_LIST_0
+orclnetshared: NO
+orclnetloadbalance: NO
+orclnetservicename: {{ SERVICE_NAME }}
+
+dn: cn=ADDRESS_LIST_0, cn=DESCRIPTION_0, {{ DN }}
+objectclass: top
+objectclass: orclNetAddressList
+cn: ADDRESS_LIST_0
+orclversion: v0.0
+orclnetaddrlist: 000:cn=ADDRESS_0
+orclnetshared: NO
+orclnetsourceroute: NO
+orclnetloadbalance: NO
+orclnetfailover: YES
+
+dn: cn=ADDRESS_0, cn=ADDRESS_LIST_0, cn=DESCRIPTION_0, {{ DN }}
+objectclass: top
+objectclass: orclNetAddress
+cn: ADDRESS_0
+orclversion: v0.0
+orclnetprotocol: TCP
+orclnetaddressstring: (ADDRESS=(PROTOCOL=TCP)(HOST={{ HOST }})(PORT={{ LISPORT }}))
+orclnetshared: NO
