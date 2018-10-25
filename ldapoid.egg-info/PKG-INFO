@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: ldapoid
+Version: 0.1.0
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Evgeniy Krasnukhin
+Author-email: e.krasnukhin@cft.ru
+License: UNKNOWN
+Description: Description
+        ===================
+        
+        The package is designed to work with Oracle Internet Directory.
+        The package allows:
+        
+          - create dbalias
+          - delete dbalias
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
