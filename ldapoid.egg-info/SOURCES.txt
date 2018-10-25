@@ -1,0 +1,14 @@
+MANIFEST.in
+README.rst
+setup.py
+ldapoid/__init__.py
+ldapoid/config.py
+ldapoid/ld.py
+ldapoid/test.py
+ldapoid/utils.py
+ldapoid.egg-info/PKG-INFO
+ldapoid.egg-info/SOURCES.txt
+ldapoid.egg-info/dependency_links.txt
+ldapoid.egg-info/requires.txt
+ldapoid.egg-info/top_level.txt
+ldapoid/templates/dn.ldif.j2
