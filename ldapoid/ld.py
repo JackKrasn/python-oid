@@ -62,6 +62,7 @@ def create_dbalias(ldap_conn, dn_domain=None, dbalias=None, host=None, lisport=N
         ldif_file = utils.gen_from_tpl(config.TPL_DIR, config.TPL_DN, **tpl_context)
         parser = MyLDIF(ldif_file, ldap_conn)
         parser.parse()
+        logging.info('tns %s successfully added', dbalias)
 
 
 def delete_dbalias(ldap_conn, dn_domain=None, dbalias=None):
