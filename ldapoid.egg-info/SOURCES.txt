@@ -4,6 +4,7 @@ setup.py
 ldapoid/__init__.py
 ldapoid/config.py
 ldapoid/ld.py
+ldapoid/oidexceptions.py
 ldapoid/test.py
 ldapoid/utils.py
 ldapoid.egg-info/PKG-INFO
